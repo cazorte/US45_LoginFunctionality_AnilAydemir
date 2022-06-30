@@ -41,11 +41,14 @@ public class Driver {
 
         return driver;
     }
-
-
-    public static void main(String[] args) {
-        Driver.getDriver().get("https://www.google.com");
+    public static void closeDriver(){
+        if (driver!=null){
+            driver.quit();
+            driver = null;
+        }
     }
+
+
 
 
 }
